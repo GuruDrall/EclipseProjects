@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" strict="true">
+	<Appenders>
+		<Appender type="Console" name="STDOUT">
+			<Layout type="PatternLayout"
+				pattern="%d{HH:mm:ss.SSS} [%t]%-5level
+%logger{36} - %msg%n" />
+		</Appender>
+		<Appender type="File" name="file"
+			fileName="C:\Users\gsdra\eclipse-workspace\SeleniumCourse\Log4j2\logs8 ">
+			<Layout type="PatternLayout"
+				pattern="%d{HH:mm:ss.SSS} [%t]%-5level
+%logger{36} - %msg%n" />
+		</Appender>
+	</Appenders>
+	<Loggers>
+		<Root level="all">
+			<AppenderRef ref="file" level="info" onMatch="Accept" onMismatch="Deny" />
+			<AppenderRef ref="STDOUT" level="info" onMatch="Accept" onMismatch="Deny" />
+		</Root>
+	</Loggers>
+</Configuration>

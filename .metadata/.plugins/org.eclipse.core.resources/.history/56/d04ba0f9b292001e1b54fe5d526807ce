@@ -1,0 +1,73 @@
+package TestCases;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import PageObject.CartPage;
+import PageObject.HomePage;
+import PageObject.LoginPage;
+
+public class AllTestCases extends BaseClass {
+	LoginPage lp;
+
+	@Test(dataProvider = "correct_creds_data", dataProviderClass = Utilities.DataProviders.class, priority = 1)
+	public void loginCheckWithCorrectCreds(String username, String password) {
+		launchBrowser();
+		openURL();
+		lp = new LoginPage();
+		HomePage hp = lp.perform_login(username, password);
+		boolean status;
+		try {
+			status = hp.cartIconDisplayed();
+		} catch (Exception e) {
+			System.out.println("Cart Icon not found");
+			status = false;
+		}
+//		System.out.println(status);
+		Assert.assertTrue(status);
+		driver.close();
+	}
+
+	@Test (priority = 2)
+	public void loginCheckWithIncorrectCreds() {
+		launchBrowser();
+		openURL();
+		lp = new LoginPage();
+		String username = "12345";
+		String password = "sdfghj";
+		HomePage hp = lp.perform_login(username, password);
+		boolean status = true;
+		try {
+			status = hp.cartIconDisplayed();
+		} catch (Exception e) {
+			System.out.println("Cart Icon not found");
+			status = false;
+		}
+		Assert.assertFalse(status);
+
+	}
+
+	@Test (priority = 3)
+	public void addProductToCart() throws InterruptedException {
+		String productName = "Sauce Labs Bolt T-Shirt";
+		launchBrowser();
+		openURL();
+		lp = new LoginPage();
+		String username = "standard_user";
+		String password = "secret_sauce";
+		HomePage hp = lp.perform_login(username, password);
+		Thread.sleep(1000);
+		hp.selectProductByName(productName);
+		Thread.sleep(1000);
+		CartPage cp = hp.clickOnCartIcon();
+		Thread.sleep(1000);
+		cp.clickOnCheckout();
+		Thread.sleep(1000);
+		cp.enterDetails("James", "Bond", "007");
+		Thread.sleep(1000);
+		Assert.assertTrue(cp.confirmationMsgCheck());
+		Thread.sleep(1000);
+		driver.close();
+	}
+
+}

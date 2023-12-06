@@ -1,0 +1,35 @@
+package com.main.base;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.functional.pages.LoginPage;
+import com.shortProj.dataProviders.dataProviderClass;
+public class Test_Cases extends BaseClass1 {
+	LoginPage loginPage;
+
+	@Test
+	public void login() {
+		launchBrowser();
+		openURL();
+		loginPage = new LoginPage();
+		loginPage.enterUsername();
+		loginPage.enterPassword();
+		loginPage.ClickSubmit();
+		String actURL=driver.getCurrentUrl();
+		String expectedURL="https://practicetestautomation.com/logged-in-successfully/";
+		Assert.assertEquals(actURL, expectedURL);
+	}
+
+	@Test(dataProvider = "excelData", dataProviderClass = dataProviderClass.class)
+	public void loginTest(String username, String password) {
+		launchBrowser();
+		openURL();
+		loginPage = new LoginPage();
+		loginPage.loginWithDP(username, password);
+		String actURL=driver.getCurrentUrl();
+		String expectedURL="https://practicetestautomation.com/logged-in-successfully/";
+		Assert.assertEquals(actURL, expectedURL);
+	}
+
+}

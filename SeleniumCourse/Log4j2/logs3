@@ -1,0 +1,5 @@
+01:12:49.791 [main]INFO  log4j2.Log4j2CLass - info msg
+01:12:49.794 [main]ERROR log4j2.Log4j2CLass - error msg
+01:12:49.795 [main]FATAL log4j2.Log4j2CLass - fatal msg
+01:12:49.795 [main]WARN  log4j2.Log4j2CLass - warn msg
+01:12:49.796 [main]DEBUG log4j2.Log4j2CLass - debug msg
