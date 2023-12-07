@@ -1,0 +1,55 @@
+package PageObject;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import TestCases.BaseClass;
+
+public class CartPage extends BaseClass{
+	
+	public CartPage() {
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy (css="#checkout")
+	WebElement checkoutBtn;
+	
+	@FindBy (css="#first-name")
+	WebElement firstName;
+	
+	@FindBy (css="#last-name")
+	WebElement lastName;
+	
+	@FindBy (css="#postal-code")
+	WebElement postalCode;
+	
+	@FindBy (css=".submit-button")
+	WebElement submitBtn;
+	
+	@FindBy (css="#finish")
+	WebElement finishBtn;
+	
+	@FindBy (xpath="//h2[@class='complete-header']")
+	WebElement confirmOrder;
+	
+	
+	
+	public void clickOnCheckout() {
+		checkoutBtn.click();
+	}
+	
+	public void enterDetails(String fname, String lname, String pcode) {
+		firstName.sendKeys(fname);
+		lastName.sendKeys(lname);
+		postalCode.sendKeys(pcode);
+		submitBtn.click();
+		finishBtn.click();
+	}
+	
+	public boolean confirmationMsgCheck() {
+		boolean status = confirmOrder.getText().equalsIgnoreCase("Thank you for your order!");
+		return status;
+	}
+
+}

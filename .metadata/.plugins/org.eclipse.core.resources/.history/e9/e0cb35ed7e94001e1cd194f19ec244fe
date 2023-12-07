@@ -1,0 +1,67 @@
+package TestCases;
+
+import org.testng.Assert;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import PageObject.HomePage;
+import PageObject.LoginPage;
+
+@Listeners (Utilities.Listeners.class)
+public class AllTestCases extends BaseClass {
+	LoginPage lp;
+
+	@Test(dataProvider = "correct_creds_data", dataProviderClass = Utilities.DataProviders.class, priority = 1)
+	public void loginWithCorrectCreds(String username, String password) {
+		launchBrowser();
+		openURL();
+		lp = new LoginPage();
+		HomePage hp = lp.perform_login(username, password);
+		boolean status;
+		try {
+			status = hp.cartIconDisplayed();
+		} catch (Exception e) {
+			System.out.println("Cart Icon not found");
+			status = false;
+		}
+//		System.out.println(status);
+		Assert.assertTrue(status);
+	}
+
+	@Test
+	public void login1() {
+		launchBrowser();
+		openURL();
+		lp = new LoginPage();
+		String username = "standard_user";
+		String password = "secret_sauce";
+		HomePage hp = lp.perform_login(username, password);
+		boolean status = true;
+		try {
+			status = hp.cartIconDisplayed();
+		} catch (Exception e) {
+			System.out.println("Cart Icon not found");
+			status = false;
+		}
+		Assert.assertTrue(status);
+	}
+	
+	@Test
+	public void login2() {
+		launchBrowser();
+		openURL();
+		lp = new LoginPage();
+		String username = "visual_user";
+		String password = "secret_sauce";
+		HomePage hp = lp.perform_login(username, password);
+		boolean status = true;
+		try {
+			status = hp.cartIconDisplayed();
+		} catch (Exception e) {
+			System.out.println("Cart Icon not found");
+			status = false;
+		}
+		Assert.assertTrue(status);
+	}
+
+}
