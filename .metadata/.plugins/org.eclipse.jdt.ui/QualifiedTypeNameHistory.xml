@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.openqa.selenium.support.FindBy"/>
-    <fullyQualifiedTypeName name="com.functional.pages.LoginPage"/>
-    <fullyQualifiedTypeName name="com.shortProj.utility.ExcelLibrary"/>
-    <fullyQualifiedTypeName name="com.shortProj.dataProviders.dataProviderClass"/>
-    <fullyQualifiedTypeName name="com.action.perform.Action"/>
-    <fullyQualifiedTypeName name="com.functional.pages.HomePage"/>
-    <fullyQualifiedTypeName name="net.bytebuddy.implementation.bind.annotation.DefaultCall.Binder.DefaultMethodLocator.Implicit"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.interactions.Actions"/>
     <fullyQualifiedTypeName name="org.apache.logging.log4j.LogManager"/>
     <fullyQualifiedTypeName name="org.apache.logging.log4j.core.Logger"/>
@@ -20,7 +13,6 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="org.apache.xmlbeans.SystemProperties"/>
     <fullyQualifiedTypeName name="org.testng.annotations.BeforeSuite"/>
-    <fullyQualifiedTypeName name="PageObject.LoginPage"/>
     <fullyQualifiedTypeName name="java.time.Duration"/>
     <fullyQualifiedTypeName name="org.testng.annotations.DataProvider"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
@@ -31,7 +23,6 @@
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFWorkbook"/>
     <fullyQualifiedTypeName name="Utilities.ExcelLibrary"/>
-    <fullyQualifiedTypeName name="org.testng.Assert"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
     <fullyQualifiedTypeName name="TestCases.HomePage"/>
     <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
@@ -60,4 +51,13 @@
     <fullyQualifiedTypeName name="Utilities.Listeners"/>
     <fullyQualifiedTypeName name="org.testng.annotations.BeforeMethod"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="BaseClass.BaseClass"/>
+    <fullyQualifiedTypeName name="PageObject.LoginPage"/>
+    <fullyQualifiedTypeName name="PageObject.HomePage"/>
+    <fullyQualifiedTypeName name="org.testng.Assert"/>
+    <fullyQualifiedTypeName name="io.cucumber.java.en.Then"/>
+    <fullyQualifiedTypeName name="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+    <fullyQualifiedTypeName name="io.cucumber.junit.Cucumber"/>
+    <fullyQualifiedTypeName name="io.cucumber.junit.CucumberOptions"/>
+    <fullyQualifiedTypeName name="stepDefinations.StepDefinationClass"/>
 </qualifiedTypeNameHistroy>

@@ -73,12 +73,4 @@ public class BrokenLinks {
 
 	}
 
-	private static Object getReturnCode(WebElement link) {
-
-// TODO Auto-generated method stub
-
-		return null;
-
-	}
-
 }

@@ -1,0 +1,9 @@
+Feature: Login
+Scenario: Successful login with valid credentials
+
+Given open browser "chrome"
+When open url "https://www.saucedemo.com/"
+And enter username "standard_user" and password "secret_sauce"
+And click submit
+Then User should be on home page
+And close browser

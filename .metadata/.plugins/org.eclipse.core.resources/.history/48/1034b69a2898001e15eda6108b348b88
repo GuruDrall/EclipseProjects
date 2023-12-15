@@ -1,0 +1,12 @@
+package testRunnerFile;
+
+import org.junit.runner.RunWith;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+@RunWith(Cucumber.class)
+@CucumberOptions (features = "Fetures/Test.feature", glue = "src/test/java/stepDefinations",
+monochrome = true ,dryRun = false,  plugin = {"html:target/cucumber.html"})
+public class TestRunner {
+
+}

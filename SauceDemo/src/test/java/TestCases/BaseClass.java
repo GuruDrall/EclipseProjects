@@ -46,7 +46,7 @@ public class BaseClass {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		browser = prop.getProperty("browser");
+		browser = prop.getProperty("browser"); // browser = "chrome";
 		System.out.println(browser);
 	}
 	
@@ -65,6 +65,9 @@ public class BaseClass {
 		case "ie":
 			driver = new InternetExplorerDriver();
 			break;
+		default:
+			System.out.println("browser is null");
+		
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

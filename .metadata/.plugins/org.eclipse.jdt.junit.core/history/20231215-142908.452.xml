@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner (1)" project="SauceDemoBDD" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="testRunnerFile.TestRunner" time="6.125">
+    <testsuite name="Login" time="6.125">
+      <testcase name="Successful login with valid credentials" classname="Login" time="2.706"/>
+      <testcase name="Successful login with multipule valid credentials #1" classname="Login" time="1.698"/>
+      <testcase name="Successful login with multipule valid credentials #2" classname="Login" time="1.721"/>
+    </testsuite>
+  </testsuite>
+</testrun>

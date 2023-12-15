@@ -2,3 +2,9 @@
 1701766393734	Delete element
 1701766506730	Move 'Test.feature' to 'Features'
 1701766560598	Delete element
+1701936857047	Delete element
+1701957736075	Delete element
+1701958741794	Rename package 'TestRunner'
+1701958756037	Rename package 'StepDefinations'
+1701958765858	Rename package 'PageObject'
+1701958776271	Rename package 'BaseClass'

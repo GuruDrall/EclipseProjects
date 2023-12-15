@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-04T22:12:11 IST" name="Default suite" finished-at="2023-12-04T22:12:20 IST" duration-ms="8477">
+  <suite started-at="2023-12-10T19:20:59 IST" name="Default suite" finished-at="2023-12-10T19:21:10 IST" duration-ms="10668">
     <groups>
     </groups>
-    <test started-at="2023-12-04T22:12:11 IST" name="Default test" finished-at="2023-12-04T22:12:20 IST" duration-ms="8477">
+    <test started-at="2023-12-10T19:20:59 IST" name="Default test" finished-at="2023-12-10T19:21:10 IST" duration-ms="10668">
       <class name="TestCases.AllTestCases">
-        <test-method is-config="true" signature="loadProperties()[pri:0, instance:TestCases.AllTestCases@639c2c1d]" started-at="2023-12-04T22:12:11 IST" name="loadProperties" finished-at="2023-12-04T22:12:11 IST" duration-ms="13" status="PASS">
+        <test-method is-config="true" signature="loadProperties()[pri:0, instance:TestCases.AllTestCases@74235045]" started-at="2023-12-10T19:20:59 IST" name="loadProperties" finished-at="2023-12-10T19:20:59 IST" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadProperties -->
-        <test-method signature="loginCheckWithIncorrectCreds()[pri:2, instance:TestCases.AllTestCases@639c2c1d]" started-at="2023-12-04T22:12:11 IST" name="loginCheckWithIncorrectCreds" finished-at="2023-12-04T22:12:20 IST" duration-ms="8432" status="PASS">
+        <test-method signature="loginCheckWithIncorrectCreds()[pri:2, instance:TestCases.AllTestCases@74235045]" started-at="2023-12-10T19:20:59 IST" name="loginCheckWithIncorrectCreds" finished-at="2023-12-10T19:21:10 IST" duration-ms="10624" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginCheckWithIncorrectCreds -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.AllTestCases@639c2c1d]" started-at="2023-12-04T22:12:20 IST" name="tearDown" finished-at="2023-12-04T22:12:20 IST" duration-ms="29" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.AllTestCases@74235045]" started-at="2023-12-10T19:21:10 IST" name="tearDown" finished-at="2023-12-10T19:21:10 IST" duration-ms="31" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
